@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class RegistrasiKuliah extends Model
 {
+  protected $guarded = [];
+
   public function mahasiswa(): BelongsTo
   {
     return $this->belongsTo(Mahasiswa::class);

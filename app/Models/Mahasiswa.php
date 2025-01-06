@@ -8,6 +8,8 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Mahasiswa extends Model
 {
+  protected $guarded = [];
+
   public function programStudi(): BelongsTo
   {
     return $this->belongsTo(ProgramStudi::class);

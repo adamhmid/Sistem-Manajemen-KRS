@@ -8,6 +8,8 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Kelas extends Model
 {
+  protected $guarded = [];
+
   public function dosen(): BelongsTo
   {
     return $this->belongsTo(Dosen::class);
